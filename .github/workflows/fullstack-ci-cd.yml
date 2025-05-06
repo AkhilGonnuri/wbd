@@ -52,6 +52,3 @@ jobs:
         working-directory: ./frontend
         run: npm run build
 
-      - name: Deploy to Vercel (optional)
-        if: github.event_name == 'push'
-        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
